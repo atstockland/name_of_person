@@ -40,7 +40,7 @@ module NameOfPerson
       @possessive ||= "#{self}'#{"s" unless end_with?("s")}"
     end
    
-    # Returns first name with with trailing 's or ' if first name ends in s.
+    # Returns first name with trailing 's or ' if first name ends in s.
     def first_possessive
       @first_possessive ||= "#{self.first}'#{"s" unless first.end_with?("s")}"
     end
