@@ -55,6 +55,12 @@ class PersonNameTest < ActiveSupport::TestCase
     assert_equal "#{@first.full}'s", @first.possessive
     assert_equal "Foo Bars'", PersonName.new('Foo', 'Bars').possessive
   end
+  
+  test "first_possessive" do
+    assert_equal "#{@name.first}'s", @name.first_possessive
+    assert_equal "#{@first.first}'s", @first.first_possessive
+    assert_equal "Foos'", PersonName.new('Foos').first_possessive
+  end
 
   test "from full name" do
     name = PersonName.full('Will St. Clair')
